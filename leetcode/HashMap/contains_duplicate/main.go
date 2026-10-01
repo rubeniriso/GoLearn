@@ -3,14 +3,13 @@ package main
 import "fmt"
 
 func containsDuplicate(nums []int) bool {
-	unique_set := make(map[int]struct{}) // Using a map to mimic Java's HashSet
+	unique_set := make(map[int]struct{})
 	for _, x := range nums {
 
 		if _, exists := unique_set[x]; exists {
-			// If the element is already in the set, return true
 			return true
 		}
-		unique_set[x] = struct{}{} // Add the element to the set
+		unique_set[x] = struct{}{}
 	}
 	return false
 }
